@@ -1,0 +1,17 @@
+{
+  "name": "es6-features",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AlbertWhite/es6-features.git",
+  "author": "AlbertWhite",
+  "license": "MIT",
+  "dependencies": {
+    "https": "^1.0.0",
+    "ssl-root-cas": "^1.2.4"
+  },
+  "devDependencies": {
+    "axios": "^0.17.1",
+    "es6-promise": "^4.2.4",
+    "isomorphic-fetch": "^2.2.1"
+  }
+}

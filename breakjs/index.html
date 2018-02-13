@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script src="break.js"></script>
+<script type="text/javascript">
+	var layout = Breakjs({
+	  // choose any breakpoints you want
+	  mobile: 0,
+	  phablet: 550,
+	  tablet: 768,
+	  desktop: 992
+	});
+
+	layout.addChangeListener(function(layout) {
+  	console.log(layout); // prints current breakpoint name when layout is changed
+	});
+</script>
+</html>
