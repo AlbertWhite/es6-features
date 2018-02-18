@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 </head>
-<body>
 
+<body>
+	<h1>Current Layout: </h1>
+	<h2></h2>
 </body>
 <script src="break.js"></script>
 <script type="text/javascript">
 	var layout = Breakjs({
-	  // choose any breakpoints you want
-	  mobile: 0,
-	  phablet: 550,
-	  tablet: 768,
-	  desktop: 992
+		// choose any breakpoints you want
+		mobile: 0,
+		phablet: 550,
+		tablet: 768,
+		desktop: 992
 	});
 
-	layout.addChangeListener(function(layout) {
-  	console.log(layout); // prints current breakpoint name when layout is changed
-	});
+	document.getElementsByTagName("h2")[0].innerHTML = layout.current();
+
+	document.getElementsByTagName("body")[0].onresize = function () {
+		document.getElementsByTagName("h2")[0].innerHTML = layout.current();
+	}
+
+	//problem: the change listener is triggered for firefox while reducing the screen
+	// layout.addChangeListener(function () {
+	// 	document.getElementsByTagName("h2")[0].innerHTML = layout.current();
+	// });
 </script>
+
 </html>
